@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>DEVOREX - Обратная связь</title>
+  <style>
+    /* Общие стили */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Шапка сайта */
+    .header {
+        display: flex;
+  flex-wrap: wrap;
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Логотип */
+    .logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    display: inline-block;
+  }
+
+  .logo img {
+    max-width: 150px; /* Измените размер по вашему усмотрению */
+    height: auto;
+  }
+
+  .logo h2 {
+    display: none; /* Скрываем текст "DEVOREX" */
+  }
+  
+
+    .topnav {
+        display: flex;
+  flex-wrap: wrap;
+      background-color: #a80202;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    .topnav a {
+        display: flex;
+  flex-wrap: wrap;
+      color: #fff;
+      display: inline-block;
+      padding: 14px 16px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .topnav a:hover {
+      background-color: #555;
+    }
+
+    /* Список вкладок */
+    .topnav .dropdown {
+      display: inline-block;
+    }
+
+    .topnav .dropdown-content {
+        display: flex;
+  flex-wrap: wrap;
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .topnav .dropdown-content a {
+        display: flex;
+  flex-wrap: wrap;
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .topnav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Секция основного содержимого */
+    .content {
+        display: flex;
+  flex-wrap: wrap;
+      padding: auto;
+      text-align: center;
+    }
+
+    /* Футер */
+    .footer {
+      position: relative;
+      flex-wrap: wrap;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 20px;
+      left: 10px;
+    }
+
+    .footer-contact {
+      margin-left: auto;
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+    }
+
+    .footer-links {
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 5px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #a80202;
+    }
+
+    .contact-us {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-us:hover {
+      text-decoration: underline;
+    }
+
+.text h2 {
+  position: relative;
+  text-align: center;
+  color: #d63636;
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-color: #f1f1f1;
+}
+
+.text {
+  border-radius: 5px;
+  background-color: #006bd5;
+  padding: 10px;
+  display: inline-block;
+}
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.contact-form h3 {
+  text-align: center;
+  color: #d63636;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #a80202;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #d63636;
+}
+  /* Медиазапросы для адаптации под различные устройства */
+
+        /* Мобильные устройства */
+        @media (max-width: 480px) {
+            .header {
+                padding: 10px;
+            }
+            .logo {
+                padding: 5px;
+            }
+            .logo h2 {
+                font-size: 20px;
+            }
+            .topnav {
+                width: 60%;
+                padding: 2px;
+            }
+            .topnav a {
+                padding: 10px 12px;
+            }
+            .content {
+                padding: 10px;
+            }
+            .footer {
+                padding: 10px;
+            }
+            .carousel {
+                height: 300px;
+            }
+        }
+
+        /* Планшеты */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .header {
+                padding: 15px;
+            }
+            .logo {
+                padding: 8px;
+            }
+            .logo h2 {
+                font-size: 22px;
+            }
+            .topnav {
+                width: 40%;
+                padding: 4px;
+            }
+            .topnav a {
+                padding: 12px 14px;
+            }
+            .content {
+                padding: 15px;
+            }
+            .footer {
+                padding: 15px;
+            }
+            .carousel {
+                height: 400px;
+            }
+        }
+
+        /* Настольные компьютеры */
+        @media (min-width: 1025px) {
+            .header {
+                padding: 20px;
+            }
+            .logo {
+                padding: 10px;
+            }
+            .logo h2 {
+                font-size: 24px;
+            }
+            .topnav {
+                width: 30%;
+                padding: 5px;
+            }
+            .topnav a {
+                padding: 14px 16px;
+            }
+            .content {
+                padding: auto;
+            }
+            .footer {
+                padding: 20px;
+            }
+            .carousel {
+                height: 600px;
+            }
+        }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="Знімок екрана (13).png" alt="Logo">
+    </div>
+    <div class="topnav">
+      <div class="dropdown">
+        <a href="dev.html">Главная</a>
+        <div class="dropdown-content">
+          <a href="CLASSIC 120.html">CLASSIC 120</a>
+          <a href="ELEGANCE 140.html">ELEGANCE 140</a>
+        </div>
+      </div>
+      <a href="map.html">Где купить</a>
+
+      <div class="dropdown">
+        <a href="#">Скачать</a>
+        <div class="dropdown-content">
+          <a href="#">Прайс-лист</a>
+          <a href="DEVOREX_CLASSIC_Warranty_10_years-09.2014_RU.pdf" download="Гарантия DEVOREX.pdf">Скачать сертификаты</a>
+          <a href="DEVOREX-Catalog-2015.pdf" download="Каталог DEVOREX.pdf">Скачать каталог</a>
+        </div>
+      </div>
+      <a href="contacts.html">Контакты</a>
+    </div>
+  </div>
+  <div class="contact-container">
+    <div class="contact-form">
+      <h3>Обратная связь</h3>
+      <form action="mailto:andrcross170@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Имя:</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+      
+        <label for="subject">Тема:</label>
+        <input type="text" name="subject" id="subject" required>
+      
+        <label for="message">Сообщение:</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+      
+        <input type="submit" value="Отправить">
+      </form>
+    </div>
+    
+    <div class="contact-info">
+      <h3>Контактные данные</h3>
+      <p>Телефон: +380675147397</p>
+      <p>Email: andrcross170@gmail.com</p>
+    </div>
+</div>
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      DEVOREX
+    </div>
+    <div class="footer-links">
+      <a href="dev.html">Главная</a>
+      <a href="#">Каталог</a>
+      <a href="#">Наши достоинства</a>
+      <a href="#">Про компанию</a>
+      <a href="contacts.html" class="contact-us">Связатся с нами</a>
+    </div>
+    <div class="footer-contact">
+      <p>123 Main St, City, Country</p>
+      <p>Телефон: +1 123-456-7890</p>
+      <p>Почта: info@devorex.com</p>
+    </div>
+  </div>
+</div>
+<script>
+  // Обработчик события отправки формы
+  document.addEventListener('DOMContentLoaded', function() {
+    var feedbackForm = document.querySelector('.contact-form');
+    feedbackForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      submitFeedbackForm();
+    });
+  });
+
+  // Функция отправки формы обратной связи
+  function submitFeedbackForm() {
+    // Получение данных из формы
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Отправка данных на сервер
+    var formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+
+    fetch('/submit_feedback_form', {
+      method: 'POST',
+      body: formData
+    })
+    .then(function(response) {
+      // Обработка ответа сервера
+      if (response.ok) {
+        alert('Сообщение отправлено! Спасибо за обратную связь.');
+      } else {
+        alert('Ошибка при отправке сообщения. Пожалуйста, попробуйте ещё раз.');
+      }
+    })
+    .catch(function(error) {
+      console.error('Ошибка:', error);
+      alert('Ошибка при отправке сообщения. Пожалуйста, попробуйте ещё раз.');
+    });
+  }
+</script>
+</body>
+</html>
